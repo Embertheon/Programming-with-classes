@@ -1,9 +1,13 @@
-using System;
-
-class Program
-{
-    static void Main(string[] args)
+class Program{
+ private string userInput;
+ public Program()
     {
-        Console.WriteLine("Hello Develop03 World!");
+        userInput = "";
     }
+ public void main() {  
+    userInput = Console.ReadLine();
+ }
 }
+
+
+
