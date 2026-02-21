@@ -1,40 +1,52 @@
 using System;
-
 class Program
 {
-    static int PlusOrMinus(int grade)
+    static string PlusOrMinus(int grade)
     {
-        if 
+        if (grade < 93 || grade < 60)
+        {
+            if(grade % 10 >= 7){
+                return "+";
+            }
+            else if(grade %10 < 3){
+                return "-";
+            }
+        }
+        return "";
     }
     static void Main(string[] args)
     {
+        string GradeLetter = "";
         Console.WriteLine("What is your Class score as a percentage? %");
         string Grade = Console.ReadLine();
         int GradeValue = int.Parse(Grade);
         if (GradeValue >= 90)
         {
-            Console.Write("You have an A");
+            GradeLetter = "A";
         }
         else if (GradeValue >= 80)
         {
-            Console.WriteLine("You have a B");
+            GradeLetter = "B";
         }
         else if (GradeValue >= 70)
         {
-            Console.WriteLine("You have a C");
+            GradeLetter = "C";
         }
         else if (GradeValue >= 60)
         {
-            Console.WriteLine("You have a D");
+           GradeLetter = "D";
         }
         else
         {
-            Console.WriteLine("You have a F");
+            GradeLetter = "F";
         }
+        Console.WriteLine($"Your grade is {GradeLetter}{PlusOrMinus(GradeValue)}");
+
         if (GradeValue >= 70)
         {
             Console.WriteLine("You passed the class congagulations!");
         }
 
     }
+    
 }
