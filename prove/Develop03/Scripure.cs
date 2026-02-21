@@ -1,10 +1,26 @@
 using System;
-// This will start by displaying "AAA" and waiting for the user to press the enter key
-Console.WriteLine("AAA");
-Console.ReadLine();
+class Scripture{
+    private string _references;
 
-// This will clear the console
-Console.Clear();
+    Scripture()
+    {
+        _references = "";
+    }
 
-// This will show "BBB" in the console where "AAA" used to be
-Console.WriteLine(word);
+    public string RandomScriputure()
+    {
+        //selects a random scripture
+        return _references;
+    }
+
+    public string GetReferences()
+    {
+        //splits scipture into words based on spaces
+        return _references;
+    }
+    public string GetSriptures()
+    {
+        //clears the console and gets the scripture
+        return _references;
+    }
+}
